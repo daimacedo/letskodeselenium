@@ -133,4 +133,21 @@ public class GenericMethods {
 		return null;
 	}
 
+	
+	public WebElement waitForElement(By locator, int timeout)
+	{
+		WebElement element = null;
+		
+		try{
+			
+			WebDriverWait wait = new WebDriverWait(driver, 3);
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			
+		}catch(Exception e)
+		{
+			System.out.println("Element is not available on the web page");
+		}
+		
+		return element;
+	}
 }
