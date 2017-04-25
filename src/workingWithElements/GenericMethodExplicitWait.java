@@ -37,6 +37,7 @@ public class GenericMethodExplicitWait {
 		driver.get(baseUrl);
 		WebElement teste = gm.waitForElement(By.id("name"), 3);
 		teste.sendKeys("test");
+		gm.clickWhenReady(By.id("alertbtn"),3);
 
 	}
 
