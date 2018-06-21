@@ -22,7 +22,7 @@ public class DropDown {
 	@Before
 	public void setUp() throws Exception {
 		baseUrl = "http://letskodeit.teachable.com/pages/practice";
-		System.setProperty("webdriver.gecko.driver", "/home/adtsys/selenium_drivers/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/home/daiane.macedo/Desktop/Daiane/seleniumDrivers/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -44,6 +44,8 @@ public class DropDown {
 		sel.selectByVisibleText("BMW");
 		Thread.sleep(2000);
 
+		driver.findElement(By.id("name")).sendKeys("Teste Docker Run");
+		
 		List<WebElement> options = sel.getOptions();
 
 		int size = options.size();
@@ -55,7 +57,7 @@ public class DropDown {
 
 	@After
 	public void tearDown() throws Exception {
-		driver.close();
+		//driver.close();
 	}
 
 }

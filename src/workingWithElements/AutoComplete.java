@@ -22,7 +22,7 @@ public class AutoComplete {
 	
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.gecko.driver", "/home/adtsys/selenium_drivers/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/home/daiane.macedo/Desktop/Daiane/seleniumDrivers/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
