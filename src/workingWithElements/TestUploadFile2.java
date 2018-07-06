@@ -1,10 +1,11 @@
 package workingWithElements;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
-
-import javax.swing.plaf.basic.BasicTreeUI.TreeExpansionHandler;
 
 import org.junit.After;
 import org.junit.Before;
@@ -13,13 +14,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver; 
 
-import com.sun.corba.se.impl.oa.poa.ActiveObjectMap.Key;
-
-import java.awt.*; 
-
-public class CheckBoxAndRadioButton {
+public class TestUploadFile2 {
 	WebDriver driver;
 	String baseUrl;
 
